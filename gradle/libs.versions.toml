@@ -1,10 +1,14 @@
 [versions]
 agp = "8.10.1"
 coil = "3.2.0"
+firebaseBom = "33.16.0"
+firebaseDatabaseKtx = "21.0.0"
+firebaseStorageKtx = "21.0.2"
 kotlin = "2.0.21"
-kotlinxCoroutinesAndroid = "1.10.1"
+kotlinxCoroutinesAndroid = "1.10.2"
 ksp = "2.1.21-2.0.1"
 hilt = "2.56.2"
+firebase = "4.4.3"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -26,6 +30,10 @@ androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "
 androidx-room-pagination = { module = "androidx.room:room-paging", version.ref = "room" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-database-ktx = { module = "com.google.firebase:firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+firebase-storage-ktx = { module = "com.google.firebase:firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -49,3 +57,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+firebase = { id = "com.google.gms.google-services", version.ref = "firebase" }
