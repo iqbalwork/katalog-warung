@@ -1,6 +1,5 @@
 package com.uziro.katalogwarung.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -9,18 +8,59 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Orange80,
+    onPrimary = Color.Black,
+    primaryContainer = OrangeDark,
+    onPrimaryContainer = Color.White,
+
+    secondary = Green80,
+    onSecondary = Color.Black,
+    secondaryContainer = GreenDark,
+    onSecondaryContainer = Color.White,
+
+    tertiary = Blue80,
+    onTertiary = Color.Black,
+    tertiaryContainer = BlueDark,
+    onTertiaryContainer = Color.White,
+
+    background = Color(0xFF121212),
+    onBackground = Color.White,
+
+    surface = Color(0xFF1E1E1E),
+    onSurface = Color.White,
+
+    error = ErrorRed,
+    onError = Color.Black
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = Orange40,
+    onPrimary = Color.White,
+    primaryContainer = Orange80,
+    onPrimaryContainer = Color.White,
+
+    secondary = Green40,
+    onSecondary = Color.White,
+    secondaryContainer = Green80,
+    onSecondaryContainer = Color.White,
+
+    tertiary = Blue40,
+    onTertiary = Color.White,
+    tertiaryContainer = Blue80,
+    onTertiaryContainer = Color.White,
+
+    background = BackgroundLight,
+    onBackground = TextPrimary,
+
+    surface = SurfaceLight,
+    onSurface = TextPrimary,
+
+    error = ErrorRed,
+    onError = Color.White
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

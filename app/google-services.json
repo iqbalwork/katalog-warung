@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "701714928454",
+    "project_id": "katalog-warung",
+    "storage_bucket": "katalog-warung.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701714928454:android:f2d36ad954e732b4080b47",
+        "android_client_info": {
+          "package_name": "com.uziro.katalogwarung"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-i6rhOT9g__OqQnDdEUdE31bs0Ouxa3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
