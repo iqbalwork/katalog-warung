@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serializer)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.firebase)
@@ -9,12 +12,12 @@ plugins {
 
 android {
     namespace = "com.uziro.katalogwarung"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.uziro.katalogwarung"
         minSdk = 25
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -34,8 +37,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+//    kotlinOptions {
+//        jvmTarget = "11"
+//    }
+    kotlin {
+        // Extension level
+        compilerOptions {
+            jvmTarget = JvmTarget.fromTarget("11")
+        }
     }
     buildFeatures {
         compose = true
@@ -55,9 +64,15 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.androidx.material.icons.extended)
+
+    // Kotlin Serializer
+    implementation(libs.kotlinx.serialization.json)
 
     // Room Persistence
     implementation(libs.androidx.room.runtime)
+//    implementation(libs.firebase.database)
     ksp(libs.androidx.room.ksp)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.pagination)
@@ -80,6 +95,9 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.database.ktx)
     implementation(libs.firebase.storage.ktx)
+
+//    implementation(libs.moshi)
+//    ksp(libs.moshi)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
